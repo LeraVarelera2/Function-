@@ -1,0 +1,9 @@
+def luas_persegi_panjang(a, b):         # Definisi Fungsi
+    return a*b                          # Mengembalikan hasil nilai perkalian 
+
+a = float(input("Masukkan panjang: "))  # Input Pengguna
+b = float(input("Masukkan lebar: "))
+hasil = luas_persegi_panjang(a,b)       # Memanggil fungsi Menghitung Luas
+print("Luas Persegi Panjang adalah:", hasil)   # Menampilkan Hasil
+
+
