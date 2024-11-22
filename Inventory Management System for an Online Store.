@@ -1,0 +1,21 @@
+print("Sistem Manajemen Stok Barang Toko")   # Judul Program
+stok_awal = 100                              # Inisialisasi Stok Awal
+
+def kurang_stok(stok, barang):               # Definisi Fungsi kurang_stok
+    stok_akhir = stok - barang               # Pengurangan Stok
+    return (stok_akhir)                      # Mengembalikan nilai stok_akhir yang diperbarui ke dalam fungsi(stok, barang) kembali.
+
+while True:                                  # Loop Utama
+    Barang = int(input("Masukkan jumlah barang yang ingin dikurangi: ")) # Input Jumlah Barang yang Ingin Dikurangi
+    
+    if Barang > stok_awal:                   # Validasi Stok
+        print("Jumlah barang yang ingin dijual melebihi stok yang tersedia.")
+        continue 
+    
+    stok_awal = kurang_stok(stok_awal, Barang) # Memperbarui Stok
+    print(f"{Barang} barang telah terjual. Stok total: {stok_awal}")
+    
+    lanjut = input("Apakah Anda ingin melanjutkan Transaksi? (ya/tidak): ") # Menanyakan Apakah Melanjutkan Transaksi
+    if lanjut.lower() != "ya":
+        print("Transaksi selesai. Terima kasih!") 
+        break
